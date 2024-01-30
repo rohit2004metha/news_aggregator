@@ -8,11 +8,20 @@ const Navbar = () => {
     setIsNavOpen(!isNavOpen);
   };
 
+  const closeNav = () => {
+    setIsNavOpen(false);
+  };
+
   return (
-    <nav className="navbar navbar-dark bg-dark fixed-top">
+    <nav className="navbar fixed-top custom-navbar">
       <div className="container-fluid text-center">
-        <Link className="navbar-brand" to="/">
-          NewsMonkey
+        <Link
+          className="navbar-brand"
+          to="/"
+          style={{ color: '#1F2544' }}
+          onClick={closeNav}
+        >
+          News Aggregator
         </Link>
         <button
           className={`navbar-toggler ${isNavOpen ? 'collapsed' : ''}`}
@@ -22,44 +31,78 @@ const Navbar = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className={`collapse navbar-collapse ${isNavOpen ? 'show' : ''}`}>
-          <ul className="navbar-nav mx-auto ">
+          <ul className="navbar-nav mx-auto">
             <li className="nav-item">
-              <Link className="nav-link" state={{ }} aria-current="page" to="/">
+              <Link
+                className="nav-link"
+                state={{}}
+                aria-current="page"
+                to="/"
+                onClick={closeNav}
+              >
                 Home
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/sports">
+              <Link
+                className="nav-link"
+                to="/sports"
+                onClick={closeNav}
+              >
                 Sports
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/entertainment">
+              <Link
+                className="nav-link"
+                to="/entertainment"
+                onClick={closeNav}
+              >
                 Entertainment
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/health">
+              <Link
+                className="nav-link"
+                to="/health"
+                onClick={closeNav}
+              >
                 Health
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/business">
+              <Link
+                className="nav-link"
+                to="/business"
+                onClick={closeNav}
+              >
                 Business
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/science">
+              <Link
+                className="nav-link"
+                to="/science"
+                onClick={closeNav}
+              >
                 Science
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/technology">
+              <Link
+                className="nav-link"
+                to="/technology"
+                onClick={closeNav}
+              >
                 Technology
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/general">
+              <Link
+                className="nav-link"
+                to="/general"
+                onClick={closeNav}
+              >
                 General
               </Link>
             </li>
