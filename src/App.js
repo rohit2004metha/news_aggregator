@@ -9,7 +9,7 @@ export default class App extends Component {
 
   render() {
     return (
-      <div style={{ backgroundColor: '#1F2544', color:'#FFD0EC' }}> {/* Set your desired background color */}
+      <div style={{ backgroundColor: '#1F2544', color:'#FFD0EC' }}> 
         <Router>
           <Navbar />
           <Routes>
@@ -20,7 +20,7 @@ export default class App extends Component {
             <Route exact path='/science' element={<News key='science' pageSize={this.pageSize} country='in' category='science' />}></Route>
             <Route exact path='/sports' element={<News key='sports' pageSize={this.pageSize} country='in' category='sports' />}></Route>
             <Route exact path='/technology' element={<News key='technology' pageSize={this.pageSize} country='in' category='technology' />}></Route>
-          <Route exact path='/general' element={<News key='general' pageSize={this.pageSize} country='in' category='general' />}></Route>
+            <Route exact path='/general' element={<News key='general' pageSize={this.pageSize} country='in' category='general' />}></Route>
 
           </Routes>
         </Router>
